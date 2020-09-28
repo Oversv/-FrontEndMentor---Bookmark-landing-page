@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/normalize.css?t=1601305793153"/>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
+    <link rel="stylesheet" href="css/styles.css?t=1601305793153"/>
+    <title>Frontend Mentor | Bookmark landing page</title>
+  </head>
+  <body>
+    <header class="header">           
+      <div class="header__logo-container"><img id="logo" src="images/logo-bookmark.svg" alt="logo"/></div>
+      <div class="header__icon-menu"><img class="header__menu" id="menu" src="images/icon-hamburger.svg" alt="menu"/></div>
+      <nav class="nav" id="top-menu">             
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#">Features</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Pricing</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+        </ul>
+        <button class="button--login">Login</button>
+        <div class="social-networks"><img class="social-networks__icon" src="images/icon-facebook.svg" alt="facebook"/><img class="social-networks__icon" src="images/icon-twitter.svg" alt="twitter"/></div>
+      </nav>
+    </header>
+    <main>
+      <section class="card">
+        <div class="card__description-container--bookmark-manager">
+          <h1 class="card__title--bookmark-manager">A Simple Bookmark Manager</h1>
+          <p class="card__description--bookmark-manager">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+          <div class="card__button-container">
+            <button class="button--blue">Get it on Chrome</button>
+            <button class="button--gray">Get it on Firefox</button>
+          </div>
+        </div>
+        <div class="card__img-container"><img class="scale-img" src="images/illustration-hero.svg" alt=""/></div>
+      </section>
+      <section class="card">
+        <div class="card__description-container">
+          <h2 class="card__title">Features</h2>
+          <p class="card__description">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+        </div>
+        <div class="tabs">
+          <ul class="tabs__list" id="tab-list">
+            <li class="tabs__item tabs__item--active" data-tab-target="bookmarking">Simple Bookmarking</li>
+            <li class="tabs__item" data-tab-target="searching">Speedy Searching</li>
+            <li class="tabs__item" data-tab-target="sharing">Easy Sharing                  </li>
+          </ul>
+          <div class="tabs__content tabs__content--active" id="bookmarking">
+            <picture class="tab-content__picture"><img class="tab-content__img" src="images/illustration-features-tab-1.svg" alt=""/></picture>
+            <div class="tab-content">
+              <h2 class="tab-content__title">Bookmark in one click</h2>
+              <p class="tab-content__description">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+              <button class="tab-content__button button">More Info                    </button>
+            </div>
+          </div>
+          <div class="tabs__content" id="searching">
+            <picture class="tab-content__picture"><img class="tab-content__img" src="images/illustration-features-tab-2.svg" alt=""/></picture>
+            <div class="tab-content">
+              <h2 class="tab-content__title">Intelligent search</h2>
+              <p class="tab-content__description">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+              <button class="tab-content__button button">More Info                    </button>
+            </div>
+          </div>
+          <div class="tabs__content" id="sharing">
+            <picture class="tab-content__picture"><img class="tab-content__img" src="images/illustration-features-tab-3.svg" alt=""/></picture>
+            <div class="tab-content">
+              <h2 class="tab-content__title">Share your bookmarks</h2>
+              <p class="tab-content__description">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+              <button class="tab-content__button button">More Info                    </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card__description-container">
+          <h1 class="card__title">Download the extension</h1>
+          <p class="card__description">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+        </div>
+        <div class="browser-card"><img class="browser-card__img" src="images/logo-chrome.svg" alt="logo chrome"/>
+          <h3 class="browser-card__title">Add to Chrome</h3>
+          <p class="browser-card__requirement">Minimum version 62</p><img src="images/bg-dots.svg" alt=""/>
+          <button class="button--browser">Add & Install Extension</button>
+        </div>
+        <div class="browser-card"><img class="browser-card__img" src="images/logo-firefox.svg" alt="logo chrome"/>
+          <h3 class="browser-card__title">Add to Firefox</h3>
+          <p class="browser-card__requirement">Minimum version 55</p><img src="images/bg-dots.svg" alt=""/>
+          <button class="button--browser">Add & Install Extension</button>
+        </div>
+        <div class="browser-card"><img class="browser-card__img" src="images/logo-opera.svg" alt="logo chrome"/>
+          <h3 class="browser-card__title">Add to Opera</h3>
+          <p class="browser-card__requirement">Minimum version 46</p><img src="images/bg-dots.svg" alt=""/>
+          <button class="button--browser">Add & Install Extension                                        </button>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card__description-container">
+          <h2 class="card__title">Frequently Asked Questions                    </h2>
+          <p class="card__description">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+        </div>
+        <div class="accordion" id="accordion">                  
+          <p class="accordion__question">What is Bookmark?                    </p>
+          <div class="accordion__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+          </div>
+          <p class="accordion__question">How can I request a new browser?                   </p>
+          <div class="accordion__content">
+            <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+          </div>
+          <p class="accordion__question">Is there a mobile app?                    </p>
+          <div class="accordion__content">
+            <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum   urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.</p>
+          </div>
+          <p class="accordion__question">What about other Chromium browsers?                    </p>
+          <div class="accordion__content">
+            <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.   </p>
+          </div>
+          <div class="accordion__button-container">
+            <button class="accordion__button button--more-info">More Info</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contact">
+        <p class="contact__info">35,000+ already joined</p>
+        <h2 class="contact__heading">Stay up-to-date with what we’re doing</h2>
+      </div>
+      <form class="form">
+        <input class="form__text-input" type="email" name="email" placeholder="Enter your email address"/>
+        <input class="form__submit button--contact" type="submit" value="Contact Us"/>
+      </form>
+      <div>
+        <div>
+          <picture class="header__logo-container"><img class="header__logo" src="images/logo-bookmark.svg" alt="logo"/></picture>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">Features</li>
+              <li class="nav__item">Pricing</li>
+              <li class="nav__item">Contact</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="social-networks"><a class="social-networks__link" href=""><img class="social-networks__icon" src="images/icon-facebook.svg" alt=""/></a><a class="social-networks__link" href=""><img class="social-networks__icon" src="images/icon-twitter.svg" alt=""/></a></div>
+      </div>
+    </footer>
+    <script src="js/scripts.js?t=1601305793153"></script>
+  </body>
+</html>

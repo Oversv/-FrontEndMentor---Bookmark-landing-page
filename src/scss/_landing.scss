@@ -1,0 +1,312 @@
+.header{   
+    position: fixed;
+    top: 0;
+    left: 0;    
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    z-index: 1000;
+    padding: 30px;
+    background-color: $white;    
+
+    &__icon-menu, &__logo-container{
+        z-index: 1000;
+    }
+
+    &__logo--white{
+        filter: invert(1) brightness(100);
+    }
+
+    &__menu{
+        cursor: pointer;        
+    }
+}
+
+.nav{       
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    padding: 0 30px;
+    background-color: $darkBlue;
+    color: $white;
+    opacity: .95;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: transform .3s;
+
+    &--show{
+        transform: translateY(0);
+    }
+
+    &__list{        
+        width: 100%;        
+        text-transform: uppercase;            
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 25px;      
+        padding: 0;
+        border-bottom: 1px solid $grayishBlue;;
+    }
+
+    &__item{
+        font-size: 20px;
+        letter-spacing: 3px;
+        padding: 22px;
+        border-top: 1px solid $grayishBlue;         
+    }
+
+    &__link{        
+        color: $white;       
+    }
+}
+.social-networks{
+    text-align: center;
+    margin-top: 220px;
+
+    &__icon{
+        margin: 0 20px;
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+
+    &__description-container{        
+        text-align: center;
+        
+        &--bookmark-manager{
+            @extend .card__description-container;
+            order: 1;
+        }
+    }
+
+    &__title{
+        font-size: 26px;
+        font-weight: 500;
+             
+
+        &--bookmark-manager{
+            @extend .card__title;        
+            font-size: 32px;            
+        }
+    }
+
+    &__description{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $grayishBlue;
+
+        &--bookmark-manager{
+            @extend .card__description;        
+            font-size: 16px;            
+        }        
+    }
+
+    &__button-container{
+        display: flex;
+        justify-content: space-between; 
+    }
+
+    &__img-container{
+        margin: 0 auto 50px auto;
+        border-bottom-left-radius: 90px; 
+        box-shadow: 50px 40px 0 0 rgba($softBlue, 1);
+          
+    }
+}
+
+
+.scale-img{ //!Ojo 
+    transform: scale(1.15);
+}
+
+.tabs{
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;    
+        border-bottom: 1px solid $grayishBlue;
+             
+    }
+
+    &__item{
+        cursor: pointer;
+        padding: 20px 0;
+        width: 100%;
+        border-top: 1px solid $grayishBlue;
+        color: $grayishBlue;
+        text-align: center;
+        position: relative;  
+    }
+
+    &__item:hover{
+        
+    }
+
+    &__item--active::after{
+        content: '';
+        position: absolute;
+        width: 150px;  
+        bottom: 0;
+        right: calc(50% - 75px);             
+        border-bottom: 4px solid $softRed;
+    }
+
+    &__content{
+        display: none;
+    }
+
+    &__content--active{
+        display: block;
+    }
+}
+
+.tab-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__title{
+        font-size: 26px;
+        font-weight: 500;
+    }
+    &__description{
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $grayishBlue;
+    }
+
+    &__button{
+        display: none;
+    }
+}
+
+.browser-card{
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);    
+
+    &__img{
+        padding-top: 46px;
+        padding-bottom: 8px;        
+    }
+
+    &__title{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    &__requirement{
+        font-size: 14px;
+        font-weight: 400;      
+        color: $grayishBlue;
+        margin-top: 14px;
+        margin-bottom: 26px;
+    }
+}
+
+.accordion{   
+    
+    &__question-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }  
+    &__question{
+        display: flex;
+        justify-content: space-between;        
+        font-size: 15px;
+        color: $darkBlue;
+        padding: 5px 0;        
+        cursor: pointer;   
+       
+      
+        &::after{          
+            content: '';
+            transition: transform .3s;
+            width: 18px;
+            height: 12px;
+            //display: inline-block;
+            -webkit-mask: url(../images/icon-arrow.svg) no-repeat 50% 50%;
+            mask: url(../images/icon-arrow.svg) no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+           background-color: $softBlue;            
+        }
+
+        &--active::after{          
+            background-color: $softRed;
+            transform: rotate(-180deg);
+            transition: transform .3s;       
+        }
+    }
+
+    &__img{
+        width: 18px;
+        height: 12px;
+    }
+
+    &__content {
+        text-align: left;
+        line-height: 30px;
+        font-size: 15px;
+        color: $grayishBlue;
+        padding-right: 43px;
+        padding-bottom: 15px ;        
+        font-weight: 400;
+        overflow: hidden;
+        border-bottom: 1px solid $grayishBlue; 
+        max-height: 0;
+        transition: max-height .3s ease-in-out;
+    }
+
+    &__content--show {
+        max-height: 100vh; 
+    }
+
+    &__button-container{
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+.contact{
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+    color: $white;
+
+    &__info{
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 5px;
+        margin: 0;
+        padding-top: 70px;
+    }
+
+    &__heading{
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.form{
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__text-input{
+        width: 100%;
+        height: 48px;
+    }
+}

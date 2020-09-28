@@ -1,0 +1,60 @@
+.button{
+    font-size: 14px;    
+    font-weight: 500;
+    border-radius: 6px;
+    width: 150px;
+    height: 48px;
+    border: none;
+    box-shadow: 0 10px 8px -5px hsla(229,8%,60%,0.3);
+
+    &--blue{
+        @extend .button;
+        background-color: $softBlue;
+        color: $white;
+    }
+
+    &--gray{
+        @extend .button;
+        background-color: $white2;
+        color: $gray
+    }
+
+    &--browser{
+        @extend .button;
+        background-color: $softBlue;
+        color: $white;
+        width: 230px;
+        margin: 20px 0;
+    }
+
+    &--more-info{
+        @extend .button;
+        width: 114px;
+        background-color: $softBlue;
+        color: $white;
+    }
+
+    &--contact{
+        @extend .button;
+        width: 100%;
+        background-color: $softRed;
+        color: $white;
+    }
+
+    &--login{
+        @extend .button;
+        width: 100%;
+        background-color: transparent;
+        border: 2px solid $white;
+        color: $white;
+        font-size: 20px;
+        letter-spacing: 3px;
+        font-weight: 500;
+        text-transform: uppercase; 
+    }
+
+
+
+
+}
+
