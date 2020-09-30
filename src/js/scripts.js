@@ -5,6 +5,25 @@ const acordion = document.getElementById('accordion')
 const menu = document.getElementById('menu')
 const topMenu = document.getElementById('top-menu')
 const logo = document.getElementById('logo')
+const form = document.getElementById('form-contact')
+
+const validateEmail = email =>{ 
+
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; 
+    
+    if(!re.test(String(email.value).toLowerCase())){             
+        email.classList.add('contact__email-input--error') 
+        email.nextSibling.classList.add('contact__email-error--show')
+        email.placeholder = email.value
+
+        return false   
+    }
+
+    email.classList.remove('contact__email-input--error') 
+    email.nextSibling.classList.remove('contact__email-error--show')
+
+    return true    
+}
 
 menu.addEventListener('click', () =>{
 
@@ -47,8 +66,6 @@ tabs.addEventListener('click', e =>{
     }
 })
 
-
-
 acordion.addEventListener('click', e =>{ 
 
   if(e.target.classList.contains('accordion__question')){    
@@ -58,4 +75,11 @@ acordion.addEventListener('click', e =>{
     accordionContent.classList.toggle('accordion__content--show')
   }
 
+})
+
+form.addEventListener('submit', e =>{
+    const email = form.email
+    
+    e.preventDefault()
+    validateEmail(email)
 })

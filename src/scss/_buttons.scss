@@ -36,7 +36,7 @@
 
     &--contact{
         @extend .button;
-        width: 100%;
+        width: 100%;     
         background-color: $softRed;
         color: $white;
     }
@@ -52,9 +52,6 @@
         font-weight: 500;
         text-transform: uppercase; 
     }
-
-
-
 
 }
 

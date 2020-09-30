@@ -7,6 +7,23 @@ var acordion = document.getElementById('accordion');
 var menu = document.getElementById('menu');
 var topMenu = document.getElementById('top-menu');
 var logo = document.getElementById('logo');
+var form = document.getElementById('form-contact');
+
+var validateEmail = function validateEmail(email) {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  if (!re.test(String(email.value).toLowerCase())) {
+    email.classList.add('contact__email-input--error');
+    email.nextSibling.classList.add('contact__email-error--show');
+    email.placeholder = email.value;
+    return false;
+  }
+
+  email.classList.remove('contact__email-input--error');
+  email.nextSibling.classList.remove('contact__email-error--show');
+  return true;
+};
+
 menu.addEventListener('click', function () {
   if (topMenu.classList.contains('nav--show')) {
     logo.classList.remove('header__logo--white');
@@ -45,4 +62,9 @@ acordion.addEventListener('click', function (e) {
     e.target.classList.toggle('accordion__question--active');
     accordionContent.classList.toggle('accordion__content--show');
   }
+});
+form.addEventListener('submit', function (e) {
+  var email = form.email;
+  e.preventDefault();
+  validateEmail(email);
 });

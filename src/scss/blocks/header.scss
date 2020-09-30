@@ -1,0 +1,23 @@
+.header{   
+    position: fixed;
+    top: 0;
+    left: 0;    
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 40px 30px;
+    background-color: $white;    
+
+    &__icon-menu, &__logo-container{
+        z-index: 1000;
+    }
+
+    &__logo--white{
+        filter: invert(1) brightness(100);
+    }
+
+    &__menu{
+        cursor: pointer;        
+    }
+}

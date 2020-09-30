@@ -1,0 +1,69 @@
+.card{
+    display: flex;
+    flex-direction: column;    
+
+    &__description-container{        
+        text-align: center;
+        
+        &--bookmark-manager{
+            @extend .card__description-container;
+            order: 1;
+        }
+    }
+
+    &__title{
+        font-size: 25px;
+        font-weight: 500; 
+        margin-top: 0;
+        margin-bottom: 0;             
+
+        &--bookmark-manager{
+            @extend .card__title;        
+            font-size: 32px;            
+        }
+    }
+
+    &__description{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        color: $grayishBlue;
+        margin-bottom: 40px;
+
+        &--bookmark-manager{
+            @extend .card__description;        
+            font-size: 16px;            
+        }        
+    }
+
+    &__button-container{
+        display: flex;
+        justify-content: space-between; 
+    }
+
+    &__img-container{
+        text-align: center;
+        position: relative;
+        margin-bottom: 55px;  
+        
+        &::before{
+            content: '';
+            position: absolute;            
+            bottom: 0;
+            right: -30px;
+            width: 98%;
+            max-width: 700px;//!Revisar
+            height: 80%;
+            z-index: -1;
+            border-bottom-left-radius: 90px; 
+            background-color: $softBlue;
+            
+        }
+    }
+
+    &__img{
+        transform: scale(1.15);
+        padding-bottom: 20px;
+        
+    }
+}

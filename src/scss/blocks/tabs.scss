@@ -1,0 +1,84 @@
+.tabs{
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;    
+        border-bottom: 1px solid $grayishBlue;
+        margin-bottom: 72px;             
+    }
+
+    &__item{
+        cursor: pointer;
+        padding: 19px 0;
+        width: 100%;
+        border-top: 1px solid $grayishBlue;
+        color: $darkBlue;
+        text-align: center;
+        position: relative; 
+        display: flex;        
+        justify-content: center;
+    }
+
+    &__item--active::after{
+        content: '';
+        position: absolute;
+        bottom: 0;        
+        width: 150px;
+        height: 4px; 
+        background-color: $softRed;
+    }
+
+    &__content{
+        display: none;
+    }
+
+    &__content--active{
+        display: block;
+    }
+}
+
+.tab-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;   
+
+    &__container-img{
+        position: relative;        
+        padding-bottom: 31px;
+        margin-bottom: 24px;
+        text-align: center;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 98%;
+            max-width: 480px;
+            height: 85%;
+            background-color: $softBlue;
+            left: -30px;
+            bottom: 0;
+            z-index: -1;
+            border-bottom-right-radius: 90px;
+            border-top-right-radius: 90px;  
+        }
+    }    
+
+    &__title{
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    &__description{
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        color: $grayishBlue;
+        margin-top: 14px;
+        margin-bottom: 0;
+    }
+
+    &__button{
+        display: none;
+    }
+}

@@ -1,0 +1,65 @@
+.accordion{   
+    
+    &__question-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }  
+    &__question{
+        display: flex;
+        justify-content: space-between;        
+        font-size: 15px;
+        color: $darkBlue;
+        padding-top: 12px;
+        margin-bottom: 5px;      
+        cursor: pointer;   
+       
+      
+        &::after{          
+            content: '';
+            transition: transform .3s;
+            width: 18px;
+            height: 12px;
+            //display: inline-block;
+            -webkit-mask: url(../images/icon-arrow.svg) no-repeat 50% 50%;
+            mask: url(../images/icon-arrow.svg) no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+           background-color: $softBlue;            
+        }
+
+        &--active::after{          
+            background-color: $softRed;
+            transform: rotate(-180deg);
+            transition: transform .3s;       
+        }
+    }
+
+    &__img{
+        width: 18px;
+        height: 12px;
+    }
+
+    &__content {
+        text-align: left;
+        line-height: 30px;
+        font-size: 15px;
+        color: $grayishBlue;
+        padding-right: 43px;
+        padding-bottom: 15px ;        
+        font-weight: 400;
+        overflow: hidden;
+        border-bottom: 1px solid $grayishBlue; 
+        max-height: 0;
+        transition: max-height .3s ease-in-out;
+    }
+
+    &__content--show {
+        max-height: 100vh; 
+    }
+
+    &__button-container{
+        text-align: center;
+        margin-top: 45px;
+    }
+}

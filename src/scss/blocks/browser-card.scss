@@ -1,0 +1,26 @@
+.browser-card{
+    text-align: center;    
+    margin: 10px auto;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);    
+
+    &__img{
+        padding-top: 46px;
+        padding-bottom: 8px;        
+    }
+
+    &__title{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    &__requirement{
+        font-size: 14px;
+        font-weight: 400;      
+        color: $grayishBlue;
+        margin-top: 14px;
+        margin-bottom: 26px;
+    }
+}

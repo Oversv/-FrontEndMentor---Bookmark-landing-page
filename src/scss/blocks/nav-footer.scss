@@ -1,0 +1,22 @@
+.nav-footer{
+    background-color: $darkBlue;
+    color: $white;
+    padding-top: 40px;
+
+    &__logo{
+        filter: invert(1) brightness(100);
+    }
+
+    &__list{
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 32px;
+    }
+
+    &__item{
+        font-size: 14px;
+        letter-spacing: 3px;
+        padding: 16px;
+        text-transform: uppercase;
+    }
+}

@@ -1,4 +1,14 @@
 @import "_colors";
 @import "_buttons";
 @import "_base";
-@import "_landing";
+
+//Blocks
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/social-networks";
+@import "blocks/card";
+@import "blocks/tabs";
+@import "blocks/browser-card";
+@import "blocks/accordion";
+@import "blocks/contact";
+@import "blocks/nav-footer";

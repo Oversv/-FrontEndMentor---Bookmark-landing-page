@@ -32,7 +32,7 @@ html(lang="en")
                         button.button--blue Get it on Chrome
                         button.button--gray Get it on Firefox
                 div.card__img-container
-                    img.scale-img(src="images/illustration-hero.svg", alt="")
+                    img.card__img(src="images/illustration-hero.svg", alt="")
             section.card
                 div.card__description-container
                     h2.card__title Features
@@ -43,7 +43,7 @@ html(lang="en")
                         li.tabs__item(data-tab-target="searching") Speedy Searching
                         li.tabs__item(data-tab-target="sharing") Easy Sharing                  
                     div.tabs__content.tabs__content--active#bookmarking
-                        picture.tab-content__picture
+                        div.tab-content__container-img
                             img.tab-content__img(src="images/illustration-features-tab-1.svg", alt="")
                         div.tab-content
                             h2.tab-content__title Bookmark in one click
@@ -51,7 +51,7 @@ html(lang="en")
                             button.tab-content__button.button More Info                    
 
                     div.tabs__content#searching
-                        picture.tab-content__picture
+                        div.tab-content__container-img
                             img.tab-content__img(src="images/illustration-features-tab-2.svg", alt="")
                         div.tab-content
                             h2.tab-content__title Intelligent search
@@ -59,7 +59,7 @@ html(lang="en")
                             button.tab-content__button.button More Info                    
 
                     div.tabs__content#sharing
-                        picture.tab-content__picture
+                        div.tab-content__container-img
                             img.tab-content__img(src="images/illustration-features-tab-3.svg", alt="")                       
                         div.tab-content
                             h2.tab-content__title Share your bookmarks
@@ -113,25 +113,20 @@ html(lang="en")
             .contact
                 p.contact__info 35,000+ already joined
                 h2.contact__heading Stay up-to-date with what we’re doing
-            form.form
-                input.form__text-input(type="email", name="email", placeholder="Enter your email address")
-                input.form__submit.button--contact(type="submit", value="Contact Us")
-            div
-                div
-                    picture.header__logo-container
-                        img.header__logo(src="images/logo-bookmark.svg", alt="logo")
-                    nav.nav
-                        ul.nav__list
-                            li.nav__item Features
-                            li.nav__item Pricing
-                            li.nav__item Contact
-                div.social-networks
+                form.contact__form#form-contact
+                    div.contact__container-email
+                        input.contact__email-input(type="email", name="email", placeholder="Enter your email address")
+                        small.contact__email-error Whoops, make sure it's an email
+                    input.contact__submit.button--contact(type="submit", value="Contact Us")
+            div.nav-footer                 
+                img.nav-footer__logo(src="images/logo-bookmark.svg", alt="logo")
+                nav.nav-footer__menu
+                    ul.nav-footer__list
+                        li.nav-footer__item Features
+                        li.nav-footer__item Pricing
+                        li.nav-footer__item Contact
+                div.social-networks--footer
                     a.social-networks__link(href=""): img.social-networks__icon(src="images/icon-facebook.svg", alt="")
                     a.social-networks__link(href=""): img.social-networks__icon(src="images/icon-twitter.svg", alt="")                    
-        script(src="js/scripts.js")
-            
-                
-            
-
-
+        script(src="js/scripts.js") 
             
