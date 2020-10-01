@@ -12,13 +12,17 @@ section{
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 146px; 
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 footer{
     margin-top: 122px;
     background-color: $softBlue;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 ul{

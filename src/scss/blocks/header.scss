@@ -7,14 +7,33 @@
     justify-content: space-between;
     z-index: 1000;
     padding: 40px 30px;
-    background-color: $white;    
+    background-color: $white;
+    
+    @media (min-width: 768px) {
+        position: static;
+        width: auto;
+        align-items: center;
+        justify-content: space-between;       
+        padding: 40px 0;
+        margin: 0 11.5%;        
+    }
 
     &__icon-menu, &__logo-container{
         z-index: 1000;
     }
 
+    &__icon-menu{
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
     &__logo--white{
         filter: invert(1) brightness(100);
+
+        @media (min-width: 768px) {
+            filter: none;
+        }
     }
 
     &__menu{

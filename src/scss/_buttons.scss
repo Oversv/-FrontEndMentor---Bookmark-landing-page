@@ -51,7 +51,15 @@
         letter-spacing: 3px;
         font-weight: 500;
         text-transform: uppercase; 
-    }
 
+        @media (min-width: 768px) {
+            background-color: $softRed;
+            width: 110px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            border: none;
+            height: 40px;
+        }
+    }
 }
 

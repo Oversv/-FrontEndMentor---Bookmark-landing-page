@@ -2,6 +2,10 @@
     text-align: center;
     margin-top: 220px;
 
+    @media (min-width: 768px) {
+        display: none;
+    }
+
     &--footer{       
         padding-bottom: 45px;        
     }
