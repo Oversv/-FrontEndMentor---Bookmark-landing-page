@@ -1,6 +1,6 @@
 const tabs = document.getElementById('tab-list')
 const listTabs = document.querySelectorAll('.tabs__item')
-const tabContent = document.querySelectorAll('.tabs__content')
+const tabContent = document.querySelectorAll('.tab-content')
 const acordion = document.getElementById('accordion')
 const menu = document.getElementById('menu')
 const topMenu = document.getElementById('top-menu')
@@ -23,6 +23,15 @@ const validateEmail = email =>{
     email.nextSibling.classList.remove('contact__email-error--show')
 
     return true    
+}
+//TODO mirar de crear los semicirculos dinamicamente
+const calcDifferenceBodyToSemicircle = () =>{
+    const windowSize = window.innerWidth
+    const styles = document.documentElement.style
+    const marginRight = 0.07 //%
+    const semicircle = windowSize * marginRight
+    
+    styles.setProperty('--semicircle', `-${semicircle}px`)
 }
 
 menu.addEventListener('click', () =>{
@@ -55,12 +64,11 @@ tabs.addEventListener('click', e =>{
         })
         /**Content **/
         tabContent.forEach(el =>{
-
-            el.classList.remove('tabs__content--active')
+            
+            el.classList.remove('tab-content--active')
 
             if(el.id === e.target.getAttribute('data-tab-target')){                
-                el.classList.add('tabs__content--active')
-                
+                el.classList.add('tab-content--active')              
             }
         })
     }
@@ -83,3 +91,8 @@ form.addEventListener('submit', e =>{
     e.preventDefault()
     validateEmail(email)
 })
+
+
+
+window.addEventListener('load', calcDifferenceBodyToSemicircle)
+window.addEventListener('resize', calcDifferenceBodyToSemicircle)

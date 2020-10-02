@@ -1,13 +1,38 @@
 .card{
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    
+    @media (min-width: 768px) {        
+        margin-left: 11.5%;
+        margin-right: 11.5%;
+    }
+
+    &--bookmark-manager{
+        @extend .card;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;        
+            margin-left: 11.5%;
+            margin-right: 7%;
+        }
+    }
 
     &__description-container{        
-        text-align: center;
+        text-align: center;        
+
+        @media (min-width: 768px) {
+         
+        }
         
-        &--bookmark-manager{
-            @extend .card__description-container;
+        &--bookmark-manager{         
+           text-align: center;
             order: 1;
+            
+            @media (min-width: 768px) {
+                text-align: start;
+                order: 0;
+            }
         }
     }
 
@@ -15,12 +40,20 @@
         font-size: 25px;
         font-weight: 500; 
         margin-top: 0;
-        margin-bottom: 0;             
+        margin-bottom: 0;
 
+        @media (min-width: 768px) {
+            font-size: 32px;
+        }
+        
         &--bookmark-manager{
             @extend .card__title;        
-            font-size: 32px;            
-        }
+            font-size: 32px; 
+            
+            @media (min-width: 768px) {
+                font-size: 50px;
+            }
+        }        
     }
 
     &__description{
@@ -29,22 +62,54 @@
         line-height: 25px;
         color: $grayishBlue;
         margin-bottom: 40px;
+        font-size: 16px;
+        
+        @media (min-width: 768px) {
+            width: 480px;
+            margin-left: auto;
+            margin-right: auto;           
+        }
 
         &--bookmark-manager{
             @extend .card__description;        
-            font-size: 16px;            
+            font-size: 16px;
+
+            @media (min-width: 768px) {
+                font-size: 18px;
+                padding-right: 120px;
+                margin-left: 0;
+                margin-right: 0;
+                
+            }       
         }        
     }
 
     &__button-container{
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
+
+        @media (min-width: 768px) {
+            justify-content: start;
+        }        
     }
+
+    &__button{
+        
+        @media (min-width: 768px) {
+            margin-right: 18px;
+        }        
+    }
+
 
     &__img-container{
         text-align: center;
         position: relative;
         margin-bottom: 55px;  
+
+        @media (min-width: 768px) {           
+            
+            
+        }
         
         &::before{
             content: '';
@@ -57,13 +122,15 @@
             z-index: -1;
             border-bottom-left-radius: 90px; 
             background-color: $softBlue;
-            
+
+            @media (min-width: 768px) {           
+                right: var(--semicircle);
+            }
         }
     }
 
     &__img{
         transform: scale(1.15);
-        padding-bottom: 20px;
-        
+        padding-bottom: 20px;        
     }
 }

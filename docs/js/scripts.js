@@ -2,7 +2,7 @@
 
 var tabs = document.getElementById('tab-list');
 var listTabs = document.querySelectorAll('.tabs__item');
-var tabContent = document.querySelectorAll('.tabs__content');
+var tabContent = document.querySelectorAll('.tab-content');
 var acordion = document.getElementById('accordion');
 var menu = document.getElementById('menu');
 var topMenu = document.getElementById('top-menu');
@@ -22,6 +22,16 @@ var validateEmail = function validateEmail(email) {
   email.classList.remove('contact__email-input--error');
   email.nextSibling.classList.remove('contact__email-error--show');
   return true;
+}; //TODO mirar de crear los semicirculos dinamicamente
+
+
+var calcDifferenceBodyToSemicircle = function calcDifferenceBodyToSemicircle() {
+  var windowSize = window.innerWidth;
+  var styles = document.documentElement.style;
+  var marginRight = 0.07; //%
+
+  var semicircle = windowSize * marginRight;
+  styles.setProperty('--semicircle', "-".concat(semicircle, "px"));
 };
 
 menu.addEventListener('click', function () {
@@ -48,10 +58,10 @@ tabs.addEventListener('click', function (e) {
     /**Content **/
 
     tabContent.forEach(function (el) {
-      el.classList.remove('tabs__content--active');
+      el.classList.remove('tab-content--active');
 
       if (el.id === e.target.getAttribute('data-tab-target')) {
-        el.classList.add('tabs__content--active');
+        el.classList.add('tab-content--active');
       }
     });
   }
@@ -68,3 +78,5 @@ form.addEventListener('submit', function (e) {
   e.preventDefault();
   validateEmail(email);
 });
+window.addEventListener('load', calcDifferenceBodyToSemicircle);
+window.addEventListener('resize', calcDifferenceBodyToSemicircle);

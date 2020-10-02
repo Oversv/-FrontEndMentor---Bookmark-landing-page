@@ -6,8 +6,15 @@
         display: none;
     }
 
-    &--footer{       
-        padding-bottom: 45px;        
+    &--footer{ 
+        display: flex;
+        justify-content: center;          
+        align-items: center;   
+        padding-bottom: 45px;
+        
+        @media (min-width: 768px) {             
+            padding: 0;  
+        }      
     }
 
     &__icon{

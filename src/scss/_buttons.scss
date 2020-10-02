@@ -39,6 +39,10 @@
         width: 100%;     
         background-color: $softRed;
         color: $white;
+
+        @media (min-width: 768px) {
+            width: 125px;
+        }
     }
 
     &--login{
@@ -62,4 +66,3 @@
         }
     }
 }
-

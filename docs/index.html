@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/normalize.css?t=1601543715510"/>
+    <link rel="stylesheet" href="css/normalize.css?t=1601649711896"/>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&amp;display=swap" rel="stylesheet"/>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
-    <link rel="stylesheet" href="css/styles.css?t=1601543715510"/>
+    <link rel="stylesheet" href="css/styles.css?t=1601649711896"/>
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body>
@@ -24,13 +24,13 @@
       </nav>
     </header>
     <main>
-      <section class="card">
+      <section class="card--bookmark-manager">
         <div class="card__description-container--bookmark-manager">
           <h1 class="card__title--bookmark-manager">A Simple Bookmark Manager</h1>
           <p class="card__description--bookmark-manager">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
           <div class="card__button-container">
-            <button class="button--blue">Get it on Chrome</button>
-            <button class="button--gray">Get it on Firefox</button>
+            <button class="card__button button--blue">Get it on Chrome</button>
+            <button class="card__button button--gray">Get it on Firefox</button>
           </div>
         </div>
         <div class="card__img-container"><img class="card__img" src="images/illustration-hero.svg" alt=""/></div>
@@ -46,28 +46,28 @@
             <li class="tabs__item" data-tab-target="searching">Speedy Searching</li>
             <li class="tabs__item" data-tab-target="sharing">Easy Sharing                  </li>
           </ul>
-          <div class="tabs__content tabs__content--active" id="bookmarking">
+          <div class="tab-content tab-content--active" id="bookmarking">
             <div class="tab-content__container-img"><img class="tab-content__img" src="images/illustration-features-tab-1.svg" alt=""/></div>
-            <div class="tab-content">
+            <div class="tab-content__info">
               <h2 class="tab-content__title">Bookmark in one click</h2>
               <p class="tab-content__description">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-              <button class="tab-content__button button">More Info                    </button>
+              <button class="tab-content__button button--more-info">More Info                    </button>
             </div>
           </div>
-          <div class="tabs__content" id="searching">
+          <div class="tab-content" id="searching">
             <div class="tab-content__container-img"><img class="tab-content__img" src="images/illustration-features-tab-2.svg" alt=""/></div>
-            <div class="tab-content">
+            <div class="tab-content__info">
               <h2 class="tab-content__title">Intelligent search</h2>
               <p class="tab-content__description">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-              <button class="tab-content__button button">More Info                    </button>
+              <button class="tab-content__button button--more-info">More Info                    </button>
             </div>
           </div>
-          <div class="tabs__content" id="sharing">
+          <div class="tab-content" id="sharing">
             <div class="tab-content__container-img"><img class="tab-content__img" src="images/illustration-features-tab-3.svg" alt=""/></div>
-            <div class="tab-content">
+            <div class="tab-content__info">
               <h2 class="tab-content__title">Share your bookmarks</h2>
               <p class="tab-content__description">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-              <button class="tab-content__button button">More Info                    </button>
+              <button class="tab-content__button button--more-info">More Info                    </button>
             </div>
           </div>
         </div>
@@ -77,20 +77,22 @@
           <h1 class="card__title">Download the extension</h1>
           <p class="card__description">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
         </div>
-        <div class="browser-card"><img class="browser-card__img" src="images/logo-chrome.svg" alt="logo chrome"/>
-          <h3 class="browser-card__title">Add to Chrome</h3>
-          <p class="browser-card__requirement">Minimum version 62</p><img src="images/bg-dots.svg" alt=""/>
-          <button class="button--browser">Add & Install Extension</button>
-        </div>
-        <div class="browser-card"><img class="browser-card__img" src="images/logo-firefox.svg" alt="logo chrome"/>
-          <h3 class="browser-card__title">Add to Firefox</h3>
-          <p class="browser-card__requirement">Minimum version 55</p><img src="images/bg-dots.svg" alt=""/>
-          <button class="button--browser">Add & Install Extension</button>
-        </div>
-        <div class="browser-card"><img class="browser-card__img" src="images/logo-opera.svg" alt="logo chrome"/>
-          <h3 class="browser-card__title">Add to Opera</h3>
-          <p class="browser-card__requirement">Minimum version 46</p><img src="images/bg-dots.svg" alt=""/>
-          <button class="button--browser">Add & Install Extension                                        </button>
+        <div class="browser-card">
+          <div class="browser-card__item"><img class="browser-card__img" src="images/logo-chrome.svg" alt="logo chrome"/>
+            <h3 class="browser-card__title">Add to Chrome</h3>
+            <p class="browser-card__requirement">Minimum version 62</p><img src="images/bg-dots.svg" alt=""/>
+            <button class="button--browser">Add & Install Extension</button>
+          </div>
+          <div class="browser-card__item card-position-2"><img class="browser-card__img" src="images/logo-firefox.svg" alt="logo chrome"/>
+            <h3 class="browser-card__title">Add to Firefox</h3>
+            <p class="browser-card__requirement">Minimum version 55</p><img src="images/bg-dots.svg" alt=""/>
+            <button class="button--browser">Add & Install Extension</button>
+          </div>
+          <div class="browser-card__item card-position-3"><img class="browser-card__img" src="images/logo-opera.svg" alt="logo chrome"/>
+            <h3 class="browser-card__title">Add to Opera</h3>
+            <p class="browser-card__requirement">Minimum version 46</p><img src="images/bg-dots.svg" alt=""/>
+            <button class="button--browser">Add & Install Extension                                        </button>
+          </div>
         </div>
       </section>
       <section class="card">
@@ -132,17 +134,19 @@
           <input class="contact__submit button--contact" type="submit" value="Contact Us"/>
         </form>
       </div>
-      <div class="nav-footer">                <img class="nav-footer__logo" src="images/logo-bookmark.svg" alt="logo"/>
-        <nav class="nav-footer__menu">
-          <ul class="nav-footer__list">
-            <li class="nav-footer__item">Features</li>
-            <li class="nav-footer__item">Pricing</li>
-            <li class="nav-footer__item">Contact</li>
-          </ul>
-        </nav>
+      <div class="nav-footer">
+        <div class="nav-footer__menu">                <img class="nav-footer__logo" src="images/logo-bookmark.svg" alt="logo"/>
+          <nav class="nav-footer__menu">
+            <ul class="nav-footer__list">
+              <li class="nav-footer__item">Features</li>
+              <li class="nav-footer__item">Pricing</li>
+              <li class="nav-footer__item">Contact</li>
+            </ul>
+          </nav>
+        </div>
         <div class="social-networks--footer"><a class="social-networks__link" href=""><img class="social-networks__icon" src="images/icon-facebook.svg" alt=""/></a><a class="social-networks__link" href=""><img class="social-networks__icon" src="images/icon-twitter.svg" alt=""/></a></div>
       </div>
     </footer>
-    <script src="js/scripts.js?t=1601543715510"> </script>
+    <script src="js/scripts.js?t=1601649711896"> </script>
   </body>
 </html>
