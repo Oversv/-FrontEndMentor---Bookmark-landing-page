@@ -11,12 +11,24 @@
         @extend .button;
         background-color: $softBlue;
         color: $white;
+
+        &:hover{
+            background-color: $white;
+            color: $softBlue;
+            border: 2px solid $softBlue;            
+        }
     }
 
     &--gray{
         @extend .button;
         background-color: $white2;
-        color: $gray
+        color: $gray;
+
+        &:hover{
+            background-color: $white;
+            color: $darkBlue;
+            border: 2px solid $darkBlue;            
+        }
     }
 
     &--browser{
@@ -25,6 +37,16 @@
         color: $white;
         width: 230px;
         margin: 20px 0;
+        
+        @media (min-width: 768px) {
+            border: none;
+
+            &:hover{
+                background-color: $white;
+                color: $softBlue;
+                border: 2px solid $softBlue;
+            }
+        }
     }
 
     &--more-info{
@@ -42,6 +64,12 @@
 
         @media (min-width: 768px) {
             width: 125px;
+
+            &:hover{
+                background-color: $white;
+                color: $softRed;
+                border: 2px solid $softRed;
+            }
         }
     }
 
@@ -63,6 +91,12 @@
             letter-spacing: 2px;
             border: none;
             height: 40px;
+
+            &:hover{
+                background-color: $white;
+                color: $softRed;
+                border: 2px solid $softRed;            
+            }
         }
     }
 }

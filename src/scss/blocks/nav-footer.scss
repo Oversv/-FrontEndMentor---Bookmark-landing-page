@@ -31,14 +31,11 @@
     
     &__logo{
         width: 150px;
-        filter: invert(1) brightness(100);
-        
+        filter: invert(1) brightness(100);        
         
         @media (min-width: 768px) {
             margin-left: 15px;
-            margin-right: 35px;
-            
-            
+            margin-right: 35px;            
         } 
     }
 
@@ -51,8 +48,7 @@
 
         @media (min-width: 768px) {
             flex-direction: row;         
-            margin: 0;                 
-            
+            margin: 0;
         }
     }
 
@@ -67,6 +63,11 @@
             padding: 0;
             margin: 0 20px;
             letter-spacing: 2px;
+
+            &:hover{
+                cursor: pointer;
+                color: $softRed;               
+            }
             
         }   
     }

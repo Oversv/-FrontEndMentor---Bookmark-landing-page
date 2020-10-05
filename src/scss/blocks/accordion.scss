@@ -17,18 +17,21 @@
         color: $darkBlue;
         padding-top: 12px;
         margin-bottom: 5px;      
-        cursor: pointer;
+        
         
         @media (min-width: 768px) {        
             font-size: 18px;
 
-            &:first-of-type{
+            &:hover{
+                cursor: pointer;
+                color: $softRed;
+            }
 
+            &:first-of-type{
                 padding-top: 30px;
                 border-top: 1px solid $grayishBlue;
             }
-        }
-       
+        }       
       
         &::after{          
             content: '';

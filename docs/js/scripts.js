@@ -30,8 +30,12 @@ var calcDifferenceBodyToSemicircle = function calcDifferenceBodyToSemicircle() {
   var styles = document.documentElement.style;
   var marginRight = 0.07; //%
 
-  var semicircle = windowSize * marginRight;
-  styles.setProperty('--semicircle', "-".concat(semicircle, "px"));
+  var marginLeft = 0.115; //%
+
+  var semicircleRight = windowSize * marginRight;
+  var semicircleLeft = windowSize * marginLeft;
+  styles.setProperty('--semicircleRight', "-".concat(semicircleRight, "px"));
+  styles.setProperty('--semicircleLeft', "-".concat(semicircleLeft, "px"));
 };
 
 menu.addEventListener('click', function () {

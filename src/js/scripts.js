@@ -29,9 +29,12 @@ const calcDifferenceBodyToSemicircle = () =>{
     const windowSize = window.innerWidth
     const styles = document.documentElement.style
     const marginRight = 0.07 //%
-    const semicircle = windowSize * marginRight
+    const marginLeft = 0.115 //%
+    const semicircleRight = windowSize * marginRight
+    const semicircleLeft = windowSize * marginLeft
     
-    styles.setProperty('--semicircle', `-${semicircle}px`)
+    styles.setProperty('--semicircleRight', `-${semicircleRight}px`)
+    styles.setProperty('--semicircleLeft', `-${semicircleLeft}px`)
 }
 
 menu.addEventListener('click', () =>{
