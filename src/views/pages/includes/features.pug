@@ -1,0 +1,32 @@
+section.card
+    div.card__description-container
+        h2.card__title#features Features
+        p.card__description Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
+    div.tabs
+        ul.tabs__list#tab-list
+            li.tabs__item.tabs__item--active(data-tab-target="bookmarking") Simple Bookmarking
+            li.tabs__item(data-tab-target="searching") Speedy Searching
+            li.tabs__item(data-tab-target="sharing") Easy Sharing                  
+        div.tab-content.tab-content--active#bookmarking
+            div.tab-content__container-img
+                img.tab-content__img(src="images/illustration-features-tab-1.svg", alt="")
+            div.tab-content__info
+                h2.tab-content__title Bookmark in one click
+                p.tab-content__description Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+                button.tab-content__button.button--more-info More Info                    
+
+        div.tab-content#searching
+            div.tab-content__container-img
+                img.tab-content__img(src="images/illustration-features-tab-2.svg", alt="")
+            div.tab-content__info
+                h2.tab-content__title Intelligent search
+                p.tab-content__description Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
+                button.tab-content__button.button--more-info More Info                    
+
+        div.tab-content#sharing
+            div.tab-content__container-img
+                img.tab-content__img(src="images/illustration-features-tab-3.svg", alt="")                       
+            div.tab-content__info
+                h2.tab-content__title Share your bookmarks
+                p.tab-content__description Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
+                button.tab-content__button.button--more-info More Info   

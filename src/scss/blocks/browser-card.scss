@@ -4,13 +4,14 @@
 
     @media (min-width: 768px) {        
         flex-direction: row;
-        justify-content: center;      
+        justify-content: center;
+        flex-wrap: wrap;           
     }
 
     &__item{
         text-align: center;    
         margin: 25px auto;
-        width: 280px;
+        width: 280px;        
         height: 365px;
         border-radius: 12px;
         box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);

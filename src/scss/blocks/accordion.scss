@@ -16,8 +16,7 @@
         font-size: 15px;
         color: $darkBlue;
         padding-top: 12px;
-        margin-bottom: 5px;      
-        
+        margin-bottom: 5px;        
         
         @media (min-width: 768px) {        
             font-size: 18px;
@@ -37,13 +36,12 @@
             content: '';
             transition: transform .3s;
             width: 18px;
-            height: 12px;
-            //display: inline-block;
+            height: 12px;            
             -webkit-mask: url(../images/icon-arrow.svg) no-repeat 50% 50%;
             mask: url(../images/icon-arrow.svg) no-repeat 50% 50%;
             -webkit-mask-size: cover;
             mask-size: cover;
-           background-color: $softBlue;            
+            background-color: $softBlue;            
         }
 
         &--active::after{          

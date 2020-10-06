@@ -10,6 +10,9 @@
   height: 48px;
   border: none;
   box-shadow: 0 10px 8px -5px rgba(145, 148, 161, 0.3); }
+  @media (min-width: 768px) {
+    .button:hover, .button--blue:hover, .button--gray:hover, .button--browser:hover, .button--more-info:hover, .button--contact:hover, .button--login:hover {
+      cursor: pointer; } }
   .button--blue {
     background-color: #5368df;
     color: #fff; }
@@ -77,6 +80,9 @@
 *::before,
 *::after {
   box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
 
 body {
   font-family: 'Rubik', sans-serif;
@@ -149,18 +155,20 @@ a {
   background-color: #252b46;
   opacity: .95;
   z-index: 100;
-  transform: translateY(-100%);
-  transition: transform .3s; }
+  transform: translateY(-100%); }
   @media (min-width: 768px) {
     .nav {
       position: static;
       transform: translateY(0);
       width: auto;
       height: auto;
+      display: flex;
+      align-items: center;
       background-color: #fff;
       padding: 0; } }
   .nav--show {
-    transform: translateY(0); }
+    transform: translateY(0);
+    transition: transform .3s; }
   .nav__list {
     width: 100%;
     text-transform: uppercase;
@@ -229,9 +237,8 @@ a {
     .card--bookmark-manager {
       flex-direction: row;
       justify-content: space-between;
-      margin-left: 11.5%;
-      margin-right: 7%;
-      margin-top: 130px; } }
+      margin-top: 130px;
+      margin-right: 7%; } }
   .card__description-container {
     text-align: center; }
     @media (min-width: 768px) {
@@ -476,7 +483,8 @@ a {
   @media (min-width: 768px) {
     .browser-card {
       flex-direction: row;
-      justify-content: center; } }
+      justify-content: center;
+      flex-wrap: wrap; } }
   .browser-card__item {
     text-align: center;
     margin: 25px auto;
@@ -578,8 +586,8 @@ a {
 .contact {
   margin-left: auto;
   margin-right: auto;
-  color: #fff;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  color: #fff; }
   @media (min-width: 768px) {
     .contact {
       width: 460px; } }
@@ -691,7 +699,9 @@ a {
         font-size: 13px;
         padding: 0;
         margin: 0 20px;
-        letter-spacing: 2px; }
-        .nav-footer__item:hover {
-          cursor: pointer;
-          color: #fa5757; } }
+        letter-spacing: 2px; } }
+  .nav-footer__link {
+    color: #fff; }
+    @media (min-width: 768px) {
+      .nav-footer__link:hover {
+        color: #fa5757; } }
