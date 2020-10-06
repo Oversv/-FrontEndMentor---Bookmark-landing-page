@@ -1,5 +1,8 @@
 .tabs{
 
+    @media (min-width: 768px) {
+        height: 605px;
+    }
     &__list{
         display: flex;
         flex-direction: column;
@@ -10,7 +13,7 @@
         @media (min-width: 768px) {
             flex-direction: row;
             margin-left: auto;
-            margin-right: auto;
+            margin-right: auto;                  
             max-width: 730px;
         }
     }
@@ -28,6 +31,7 @@
 
         @media (min-width: 768px) {
             border: none;
+            padding-block: 30px;
 
             &:hover{
                 color: $softRed;
@@ -75,13 +79,15 @@
 
     &__container-img{
         position: relative;        
-        padding-bottom: 31px;
-        margin-bottom: 24px;
-        text-align: center;               
+        padding-bottom: 42px;
+        margin-bottom: 10px;
+        text-align: center;                       
 
         @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
             text-align: left;
-            width: 50%;
+            width: 50%;          
         }
 
         &::after{
@@ -89,18 +95,27 @@
             position: absolute;
             width: 98%;
             max-width: 480px;
-            height: 85%;
+            height: 86%;
             background-color: $softBlue;
             left: -30px;
             bottom: 0;
             z-index: -1;
-            border-bottom-right-radius: 120px;
-            border-top-right-radius: 120px;
+            border-bottom-right-radius: 160px;
+            border-top-right-radius: 160px;    
             
             @media (min-width: 768px) {                
-                max-height: 260px; 
+                max-height: 220px; 
                 left: var(--semicircleLeft);
                 width: 90%;
+            }
+
+            @media (min-width: 1024px) { 
+                bottom: -40px;               
+                width: 120%;
+                height: 100%;
+                max-height: 350px; 
+                max-width: 600px;
+                left: var(--semicircleLeft);
             }
         }
     } 
@@ -128,18 +143,20 @@
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 0;
+        color: $darkBlue;
 
         @media (min-width: 768px) {
-            font-size: 30px;
-            color: $darkBlue;
+            font-size: 30px;            
             margin-top: 0;            
         }
     }
 
     &__description{
+        font-weight: 500;
+
         @media (min-width: 768px) {                
-            font-size: 18px;
-            margin: 30px 0;            
+            font-size: 18px;            
+            margin: 30px 0;                        
         }
     }
 

@@ -51,6 +51,7 @@
 
         @media (min-width: 768px) {
             font-size: 32px;
+            margin-bottom: 20px;           
         }
         
         &--bookmark-manager{
@@ -68,12 +69,12 @@
         font-weight: 400;
         line-height: 25px;
         color: $grayishBlue;
-        margin-bottom: 40px;
-        font-size: 16px;
+        margin-bottom: 40px;        
         
         @media (min-width: 768px) {            
             margin-left: auto;
-            margin-right: auto;           
+            margin-right: auto;            
+            font-size: 16px;           
         }
 
         &--bookmark-manager{
@@ -84,24 +85,23 @@
                 max-width: 500px;                
                 font-size: 18px;               
                 margin-right: 10px;
-                margin-left: 0;                
+                margin-left: 0;
+                                                
             }       
         }        
     }
 
     &__button-container{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;        
 
         @media (min-width: 768px) {
             justify-content: start;
         }        
     }
 
-    &__button{        
-        @media (min-width: 768px) {
-            margin-right: 18px;
-        }        
+    &__button{
+        margin-right: 18px;    
     }
 
     &__img-container{
@@ -124,10 +124,10 @@
             right: -30px;
             width: 98%;
             max-width: 700px;//!Revisar
-            height: 81%;            
+            height: 84%;            
             z-index: -1;
-            border-top-left-radius: 120px; 
-            border-bottom-left-radius: 120px; 
+            border-top-left-radius: 160px; 
+            border-bottom-left-radius: 160px; 
             background-color: $softBlue;
 
             @media (min-width: 768px) {                
@@ -137,10 +137,12 @@
             }
 
             @media (min-width: 1024px) {
-                width: 90%;            
+                width: 75%;
+                height: 90%;
+                max-width: 550px;            
                 max-height: 350px;           
                 right: var(--semicircleRight);
-                bottom: -55px;
+                bottom: -70px;
             }
         }
     }
@@ -150,7 +152,7 @@
         padding-bottom: 20px;
 
         @media (min-width: 768px) {
-            transform: scale(1.15);           
+            transform: scale(1.22);           
             padding: 0;
             max-height: 380px;
         }                
